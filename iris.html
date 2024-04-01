@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Data Model Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iris Data Model Prediction</h1>
+    <table>
+        <tr>
+            <th>Sepal Length</th>
+            <th>Sepal Width</th>
+            <th>Petal Length</th>
+            <th>Petal Width</th>
+            <th>Predicted Species</th>
+        </tr>
+        {% for prediction in predictions %}
+        <tr>
+            <td>{{ prediction[0] }}</td>
+            <td>{{ prediction[1] }}</td>
+            <td>{{ prediction[2] }}</td>
+            <td>{{ prediction[3] }}</td>
+            <td>{{ prediction[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
